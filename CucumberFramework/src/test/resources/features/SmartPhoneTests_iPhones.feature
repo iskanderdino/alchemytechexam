@@ -24,5 +24,6 @@ Feature: This feature will test the functionalities in the Smartphone webpage
     Then the Summary section should display "<insurance>" Damage Cover warranty
     And the Total Price should display updated the price with "<insurance>" Damage Cover warranty
     Examples:
-    | brand | storage | conditions | insurance |
-    | Apple | 128     | Good       | 12-month  |
+    | brand  | storage | conditions | insurance |
+    | Apple  | 128     | Good       | 12-month  |
+    | Huawei | 64      | Excellent  | 24-month  |

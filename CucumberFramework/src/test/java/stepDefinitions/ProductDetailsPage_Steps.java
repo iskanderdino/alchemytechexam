@@ -3,7 +3,6 @@ package stepDefinitions;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 import pageObject.BasePage;
-import pageObject.MainPage;
 import pageObject.ProductDetailsPage;
 
 public class ProductDetailsPage_Steps extends BasePage {
@@ -23,6 +22,6 @@ public class ProductDetailsPage_Steps extends BasePage {
 
     @And("I click No button in the Trade-in offer modal")
     public void iClickNoButtonInTheTradeInOfferModal() {
-        productDetailsPage.clickBtnElementByBtnWebElement(productDetailsPage.btnTradeInModalNo);
+        productDetailsPage.clickBtnTradeinModal();
     }
 }

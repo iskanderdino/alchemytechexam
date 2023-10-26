@@ -1,5 +1,6 @@
 package pageObject;
 
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
@@ -14,4 +15,18 @@ public class ProductDetailsPage extends BasePage {
     public WebElement btnTradeInModalNo;
     @FindBy(xpath = "//button[@data-qa='continue-shopping']")
     public WebElement btnGoToCart;
+
+    @FindBy(xpath = "//span[@id='modalTitle']")
+    public WebElement modalTradeinTitle;
+
+    public void clickBtnTradeinModal() {
+        try {
+            if (modalTradeinTitle.isDisplayed()) {
+                clickBtnElementByBtnWebElement(btnTradeInModalNo);
+            }
+        } catch (NoSuchElementException e) {
+            System.out.println("Trade-in modal is not visible, skipping this step!");
+        }
+    }
+
 }

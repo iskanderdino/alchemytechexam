@@ -1,19 +1,11 @@
 package stepDefinitions;
 
-import io.cucumber.java.en.Then;
+
 import io.cucumber.java.en.When;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.support.ui.Sleeper;
-import org.testng.Assert;
-import org.testng.asserts.Assertion;
 import pageObject.BasePage;
 import pageObject.SmartPhonePage;
 
-import java.time.Duration;
-
 public class SmartPhonePage_Steps extends BasePage {
-    private final WebDriver driver = getDriver();
-
     public SmartPhonePage smartPhonePage;
     public SmartPhonePage_Steps(SmartPhonePage smartPhonePage) {
         this.smartPhonePage = smartPhonePage;
