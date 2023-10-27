@@ -36,7 +36,7 @@ public class CartPage extends BasePage{
         float intQAFee = Float.parseFloat(txtQAFee);
         float total = intSubtotal + intQAFee;
         //convert back to string and return value
-        totalPrice = Float.toString(total);
+        totalPrice = String.format("%.2f", total);
         return totalPrice;
     }
     public String setTotalPrice() {

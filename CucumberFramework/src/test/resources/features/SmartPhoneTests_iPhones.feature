@@ -1,4 +1,4 @@
-@regression @smartphones @iphones
+@regression @smartphones
 Feature: This feature will test the functionalities in the Smartphone webpage
   Background:
     Given I visit Back Market website
