@@ -5,6 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class CartPage extends BasePage{
+    // use this constructor to call on the BasePage method inside the BasePage constructor
     public CartPage() {
         super();
     }

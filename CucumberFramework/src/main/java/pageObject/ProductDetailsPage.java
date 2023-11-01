@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class ProductDetailsPage extends BasePage {
+    // use this constructor to call on the BasePage method inside the BasePage constructor
     public ProductDetailsPage() {
         super();
     }
-
     @FindBy(xpath = "//button[@data-id='product-page-buy-button-desktop']")
     public WebElement btnBuy;
     @FindBy(xpath = "//button[@data-test='user-no']")

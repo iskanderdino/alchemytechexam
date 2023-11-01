@@ -7,22 +7,23 @@ import org.testng.Assert;
 import pageObject.BasePage;
 import pageObject.MainPage;
 
+// NOTE: for dependency injection use picocontainer api on mvn repository
 public class MainPage_Steps extends BasePage {
-
-    public MainPage mainPage;
+    // specify the class needed for dependency injection
+    private MainPage mainPage;
+    // use this constructor to access all methods and page objects in Main Page class
     public MainPage_Steps(MainPage mainPage) {
         this.mainPage = mainPage;
     }
-    @Given("^I visit Back Market website$")
+
+    @Given("I visit Back Market website")
     public void i_visit_back_market_website() {
         mainPage.navigateToMainPage();
     }
-
     @Given("I close cookie modal on the webpage")
     public void i_close_cookie_modal_on_the_webpage() {
         mainPage.clickLinkElementByWebElement(mainPage.btnCookieAccept);
     }
-
     @When("I click {string} menu in the webpage")
     public void i_click_menu_on_the_webpage(String linkText) {
         mainPage.clickLinkElementByLinkText(linkText);

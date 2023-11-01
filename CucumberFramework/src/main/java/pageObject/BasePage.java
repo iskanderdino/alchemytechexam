@@ -12,9 +12,13 @@ import java.io.IOException;
 import java.time.Duration;
 
 public class BasePage {
+
     public BasePage() {
+        // Use this method to initialize all Page Objects we declared in the Page Object class
         PageFactory.initElements(getDriver(), this);
     }
+
+    // use this method to use webdriver "getDriver" method in DriverFactory class
     public WebDriver getDriver() {return DriverFactory.getDriver();}
     public void navigateToPage(String url) {getDriver().get(url);}
     public WebDriverWait webdriverWait = new WebDriverWait(getDriver(), Duration.ofSeconds(15));
@@ -33,15 +37,9 @@ public class BasePage {
     public void clickLinkElementByLinkText(String linkText) {
         waitAndClickElementsUsingByLocator(By.linkText(linkText));
     }
-    public void clickBtnElementByBtnText(String btnText) {
-        webdriverWait.until(ExpectedConditions.elementToBeClickable(By.xpath("//button[contains(text(), '"+ btnText +"')]"))).click();
-    }
     public void clickBtnElementByBtnWebElement(WebElement element) {
         webdriverWait.until(ExpectedConditions.visibilityOf(element));
         webdriverWait.until(ExpectedConditions.elementToBeClickable(element)).click();
-    }
-    public void waitUntilVisibilityOfWebElement(WebElement webElement) {
-        webdriverWait.until(ExpectedConditions.visibilityOf(webElement));
     }
     // generate random data
     public String generateRandomNumber(int length) {return RandomStringUtils.randomNumeric(length);}

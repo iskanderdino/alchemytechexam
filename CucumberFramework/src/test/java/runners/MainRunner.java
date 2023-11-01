@@ -12,11 +12,14 @@ import org.testng.annotations.DataProvider;
  * plugin will have the following values:
  * pretty - will create readable logs on the terminal
  * html:target/cucumber - will generate an html report
+ *
+ * please see Cucumber Reference documentations
+ * https://cucumber.io/docs/cucumber/api/?lang=java
 */
 @CucumberOptions(
     features = {"classpath:features"},
     glue = {"stepDefinitions"},
-    tags = "@smartphones",
+    tags = "@regression",
     monochrome = true, dryRun = false,
     plugin = {
         "pretty", "html:target/reports/cucumber.html",
