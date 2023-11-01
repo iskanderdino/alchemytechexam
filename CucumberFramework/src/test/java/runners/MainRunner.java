@@ -16,7 +16,7 @@ import org.testng.annotations.DataProvider;
 @CucumberOptions(
     features = {"classpath:features"},
     glue = {"stepDefinitions"},
-    tags = "@filter",
+    tags = "@smartphones",
     monochrome = true, dryRun = false,
     plugin = {
         "pretty", "html:target/reports/cucumber.html",
